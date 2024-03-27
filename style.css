@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgba(0, 0, 0, 0.64);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.621);
+    overflow: hidden;
+    
+    
+}
+
+.card span:first-of-type{ /*Primeiro elemento*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:10px;
+    background: linear-gradient(to right, transparent, #4b6e9482);
+    animation: animar1 2s linear infinite;
+    
+   
+}
+@keyframes animar1 {
+    0%{
+        transform: translateX( -100%); /*Translate Horizontal*/
+    }
+    100%{
+        transform: translateX(100%);
+    }  
+}
+
+.card span:nth-of-type(2){ /*Segundo elemento*/
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height:100%;
+    background: linear-gradient(to bottom, transparent, #4b6e9473);
+    animation: animar2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animar2 {
+    0%{
+        transform: translateY( -100%); /*Translate vertical*/
+    }
+    100%{
+        transform: translateY(100%);
+    }
+}
+
+
+
+
+.card span:nth-of-type(3){ /*Terceito elemento*/
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height:10px;
+    background: linear-gradient(to left,transparent, #4b6e947c);
+    animation: animar3 2s linear  infinite;
+}
+@keyframes animar3 {
+    0%{
+        transform: translateX( 100%); /*Translate vertical*/
+    }
+    100%{
+        transform: translateX(-100%);
+    }  
+}
+
+
+
+
+
+.card span:last-of-type{ /*Último elemento*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height:100%;
+    background: linear-gradient(to top, transparent, #4b6e9474);
+    animation: animar4 2s linear  infinite;
+    animation-delay: 1s;
+    
+}
+@keyframes animar4 {
+    0%{
+        transform: translateY( 100%); /*Translate vertical*/
+    }
+    100%{
+        transform: translateY(-100%);
+    }  
+}
